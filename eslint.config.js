@@ -46,4 +46,17 @@ export default defineConfig([
       },
     },
   },
+  // Tests: enable Vitest globals (describe, it, expect, vi, etc.)
+  {
+    files: [
+      '**/*.test.{js,jsx,ts,tsx}',
+      '**/*.spec.{js,jsx,ts,tsx}',
+      '**/__tests__/**/*.{js,jsx,ts,tsx}',
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.vitest,
+      },
+    },
+  },
 ])

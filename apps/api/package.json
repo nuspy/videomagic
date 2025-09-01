@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "node ./src/index.js",
     "start": "node ./src/index.js",
+    "build": "echo \"api build: nothing to build\"",
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
     "prisma:deploy": "prisma migrate deploy",
