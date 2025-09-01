@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "dashboard": "Dashboard"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "home": {
+    "seoTitle": "Home • Starter App",
+    "seoDescription": "Welcome to the starter application with i18n and routing.",
+    "title": "Welcome",
+    "description": "This is a minimal scaffold with routing, i18n and a responsive layout."
+  },
+  "pricing": {
+    "seoTitle": "Pricing • Starter App",
+    "seoDescription": "Explore our pricing options.",
+    "title": "Pricing",
+    "description": "Simple and transparent pricing tiers."
+  },
+  "dashboard": {
+    "seoTitle": "Dashboard • Starter App",
+    "seoDescription": "Your personal dashboard (protected).",
+    "title": "Dashboard",
+    "description": "This page is protected. Configure authentication to access."
+  },
+  "notFound": {
+    "seoTitle": "Page Not Found • Starter App",
+    "seoDescription": "The page you are looking for does not exist.",
+    "title": "Page Not Found",
+    "description": "We couldn't find what you were looking for."
+  }
+}

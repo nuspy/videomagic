@@ -1,0 +1,8 @@
+<svg width="320" height="64" viewBox="0 0 320 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="64" rx="12" fill="#151823"/>
+  <text x="24" y="40" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-weight="700" font-size="28" fill="#f5f7fb">
+    Startr
+  </text>
+  <circle cx="285" cy="32" r="10" fill="#22c55e"/>
+  <circle cx="308" cy="32" r="10" fill="#6366f1"/>
+</svg>

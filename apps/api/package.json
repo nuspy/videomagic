@@ -1,0 +1,43 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ./src/index.js",
+    "start": "node ./src/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:seed": "node prisma/seed.js",
+    "test:api": "vitest --environment node --dir apps/api"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.686.0",
+    "@aws-sdk/s3-request-presigner": "^3.686.0",
+    "@paypal/checkout-server-sdk": "^1.0.3",
+    "@prisma/client": "^5.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "file-type": "^19.5.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mime-types": "^2.1.35",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "openid-client": "^6.3.4",
+    "sharp": "^0.33.5",
+    "stripe": "^16.5.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.20.0",
+    "supertest": "^7.0.0",
+    "testcontainers": "^10.10.3",
+    "vitest": "^2.1.5"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}

@@ -1,0 +1,8 @@
+<svg width="320" height="64" viewBox="0 0 320 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="64" rx="12" fill="#151823"/>
+  <text x="24" y="40" font-family="var(--font-brand), system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-weight="700" font-size="28" fill="#f5f7fb">
+    NovaFlow
+  </text>
+  <path d="M260 20 C270 10, 290 10, 300 20 S310 30, 300 40 270 50, 260 40" fill="none" stroke="#6366f1" stroke-width="3"/>
+  <circle cx="300" cy="30" r="6" fill="#22c55e"/>
+</svg>

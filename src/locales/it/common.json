@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "pricing": "Prezzi",
+    "dashboard": "Dashboard"
+  },
+  "footer": {
+    "privacy": "Informativa Privacy",
+    "terms": "Termini di Servizio"
+  },
+  "home": {
+    "seoTitle": "Home • Starter App",
+    "seoDescription": "Benvenuto nell'applicazione starter con i18n e routing.",
+    "title": "Benvenuto",
+    "description": "Questo è uno scaffolding minimale con routing, i18n e layout responsive."
+  },
+  "pricing": {
+    "seoTitle": "Prezzi • Starter App",
+    "seoDescription": "Esplora le nostre opzioni di prezzo.",
+    "title": "Prezzi",
+    "description": "Piani semplici e trasparenti."
+  },
+  "dashboard": {
+    "seoTitle": "Dashboard • Starter App",
+    "seoDescription": "La tua dashboard personale (protetta).",
+    "title": "Dashboard",
+    "description": "Questa pagina è protetta. Configura l'autenticazione per accedere."
+  },
+  "notFound": {
+    "seoTitle": "Pagina non trovata • Starter App",
+    "seoDescription": "La pagina che stai cercando non esiste.",
+    "title": "Pagina non trovata",
+    "description": "Non riusciamo a trovare quello che cerchi."
+  }
+}
