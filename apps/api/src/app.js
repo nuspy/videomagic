@@ -54,6 +54,7 @@ app.use('/', emailsRouter)
 app.use('/', quotaRouter)
 
 // Global error handler (hide internals in prod)
+ 
 app.use((err, req, res, _next) => {
   const status = 500
   const msg = config.NODE_ENV === 'production' ? 'Internal Server Error' : err.message
