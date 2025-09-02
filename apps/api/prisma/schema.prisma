@@ -55,78 +55,77 @@ enum PaymentStatus {
 }
 
 model User {
-  id                    String   @id @default(cuid())
-  googleId              String?  @unique
-  email                 String   @unique
-  name                  String?
-  picture               String?
-  role                  Role     @default(USER)
-  tokenVersion          Int      @default(0)
-  previewQuotaUsed      Int      @default(0)
-  previewQuotaResetAt   DateTime?
-  createdAt             DateTime @default(now())
-  updatedAt             DateTime @updatedAt
+  id                  String    @id @default(cuid())
+  googleId            String?   @unique
+  email               String    @unique
+  name                String?
+  picture             String?
+  role                Role      @default(USER)
+  tokenVersion        Int       @default(0)
+  previewQuotaUsed    Int       @default(0)
+  previewQuotaResetAt DateTime?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
 
-  orders     Order[]
-  media      Media[]
-  auditLogs  AuditLog[]
+  orders Order[]
+  media  Media[]
 
   @@index([googleId])
   @@index([email])
 }
 
 model Lead {
-  id                String      @id @default(cuid())
-  createdAt         DateTime    @default(now())
-  language          String      @db.VarChar(8)
-  contactEmail      String      @db.VarChar(191)
-  answers0          Json?
-  answers1          Json?
-  answers2          Json?
-  answers3          Json?
-  answers4          Json?
-  answers5          Json?
-  answers6          Json?
-  answers7          Json?
-  answers8          Json?
-  answers9          Json?
-  form              Json?       // formato, canali, tono
-  totalDurationSec  Int
-  scenesCount       Int
-  aiProvider        String      @db.VarChar(32)
-  aiModel           String      @db.VarChar(64)
-  temperature       Float       @default(0.7)
-  negativePrompt    String?     @db.Text
-  status            LeadStatus  @default(DRAFT)
+  id               String     @id @default(cuid())
+  createdAt        DateTime   @default(now())
+  language         String     @db.VarChar(8)
+  contactEmail     String     @db.VarChar(191)
+  answers0         Json?
+  answers1         Json?
+  answers2         Json?
+  answers3         Json?
+  answers4         Json?
+  answers5         Json?
+  answers6         Json?
+  answers7         Json?
+  answers8         Json?
+  answers9         Json?
+  form             Json? // formato, canali, tono
+  totalDurationSec Int
+  scenesCount      Int
+  aiProvider       String     @db.VarChar(32)
+  aiModel          String     @db.VarChar(64)
+  temperature      Float      @default(0.7)
+  negativePrompt   String?    @db.Text
+  status           LeadStatus @default(DRAFT)
 
-  media     Media[]
-  scripts   Script[]
-  orders    Order[]
+  media   Media[]
+  scripts Script[]
+  orders  Order[]
 }
 
 model Media {
-  id                String     @id @default(cuid())
+  id                String    @id @default(cuid())
   leadId            String
-  lead              Lead       @relation(fields: [leadId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  lead              Lead      @relation(fields: [leadId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   type              MediaType
-  filename          String     @db.VarChar(191)
+  filename          String    @db.VarChar(191)
   sizeBytes         Int
-  mime              String     @db.VarChar(128)
+  mime              String    @db.VarChar(128)
   width             Int?
   height            Int?
-  storageKey        String     @db.VarChar(191)
-  publicUrl         String     @db.VarChar(512)
-  thumb360Url       String?    @db.VarChar(512)
-  uploaderSessionId String?    @db.VarChar(191)
-  createdAt         DateTime   @default(now())
-  updatedAt         DateTime   @updatedAt
+  storageKey        String    @db.VarChar(191)
+  publicUrl         String    @db.VarChar(512)
+  thumb360Url       String?   @db.VarChar(512)
+  uploaderSessionId String?   @db.VarChar(191)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 
   // Legacy fields kept for compatibility (optional)
-  key        String?  @unique
+  key        String? @unique
   url        String?
   variants   Json?
   uploaderId String?
-  uploader   User?    @relation(fields: [uploaderId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  uploader   User?   @relation(fields: [uploaderId], references: [id], onDelete: SetNull, onUpdate: Cascade)
 
   @@index([leadId])
   @@index([uploaderId])
@@ -134,54 +133,54 @@ model Media {
 }
 
 model Script {
-  id            String         @id @default(cuid())
-  leadId        String
-  lead          Lead           @relation(fields: [leadId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  provider      ScriptProvider
-  model         String         @db.VarChar(64)
-  language      String         @db.VarChar(8)
-  rawPrompt     String         @db.Text
-  content       String         @db.LongText
-  editableJson  Json
-  status        ScriptStatus   @default(GENERATED)
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  id           String         @id @default(cuid())
+  leadId       String
+  lead         Lead           @relation(fields: [leadId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  provider     ScriptProvider
+  model        String         @db.VarChar(64)
+  language     String         @db.VarChar(8)
+  rawPrompt    String         @db.Text
+  content      String         @db.LongText
+  editableJson Json
+  status       ScriptStatus   @default(GENERATED)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
 
   @@index([leadId])
 }
 
 model Order {
-  id         String       @id @default(cuid())
-  userId     String
-  user       User         @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  leadId     String?
-  lead       Lead?        @relation(fields: [leadId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  id          String           @id @default(cuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  leadId      String?
+  lead        Lead?            @relation(fields: [leadId], references: [id], onDelete: SetNull, onUpdate: Cascade)
   pricingJson Json
-  currency   String       @db.VarChar(3)
-  status     OrderStatus  @default(DRAFT)
-  provider   PaymentProvider?
-  createdAt  DateTime     @default(now())
-  updatedAt  DateTime     @updatedAt
+  currency    String           @db.VarChar(3)
+  status      OrderStatus      @default(DRAFT)
+  provider    PaymentProvider?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
 
-  payments  Payment[]
+  payments Payment[]
 
   @@index([userId])
   @@index([leadId])
 }
 
 model Payment {
-  id                 String          @id @default(cuid())
-  orderId            String
-  order              Order           @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  provider           PaymentProvider
-  providerPaymentId  String          @unique
-  amount             Decimal         @db.Decimal(10, 2)
-  currency           String          @db.VarChar(3)
-  taxAmount          Decimal         @db.Decimal(10, 2) @default(0)
-  status             PaymentStatus
-  payloadJson        Json
-  createdAt          DateTime        @default(now())
-  updatedAt          DateTime        @updatedAt
+  id                String          @id @default(cuid())
+  orderId           String
+  order             Order           @relation(fields: [orderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  provider          PaymentProvider
+  providerPaymentId String          @unique
+  amount            Decimal         @db.Decimal(10, 2)
+  currency          String          @db.VarChar(3)
+  taxAmount         Decimal         @default(0) @db.Decimal(10, 2)
+  status            PaymentStatus
+  payloadJson       Json
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
 
   @@index([orderId])
 }

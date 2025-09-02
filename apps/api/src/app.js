@@ -10,6 +10,7 @@ import mediaRouter from './routes/media.js'
 import stripeRouter from './routes/payments/stripe.js'
 import paypalRouter from './routes/payments/paypal.js'
 import emailsRouter from './routes/emails.js'
+import quotaRouter from './routes/quota.js'
 
 const app = express()
 
@@ -19,7 +20,7 @@ if (config.NODE_ENV === 'development') {
     helmet({
       contentSecurityPolicy: false,
       crossOriginEmbedderPolicy: false,
-    }),
+    })
   )
 } else {
   app.use(helmet())
@@ -50,9 +51,10 @@ app.use('/', mediaRouter)
 app.use('/', stripeRouter)
 app.use('/', paypalRouter)
 app.use('/', emailsRouter)
+app.use('/', quotaRouter)
 
 // Global error handler (hide internals in prod)
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   const status = 500
   const msg = config.NODE_ENV === 'production' ? 'Internal Server Error' : err.message
   res.status(status).json({ error: msg })
