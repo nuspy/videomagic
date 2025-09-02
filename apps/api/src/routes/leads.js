@@ -1,5 +1,6 @@
 import express from 'express'
 import { prisma } from '../db.js'
+import { cookieBaseOptions } from '../config/env.js'
 
 const router = express.Router()
 
@@ -164,6 +165,22 @@ router.post('/leads', async (req, res, next) => {
       },
       select: { id: true },
     })
+
+    // Append lead id to anon_leads cookie for later association at login
+    try {
+      const raw = req.cookies['anon_leads']
+      const arr = raw ? JSON.parse(raw) : []
+      const ids = Array.isArray(arr) ? arr : []
+      ids.push(lead.id)
+      // cap to last 20
+      const capped = ids.slice(-20)
+      res.cookie('anon_leads', JSON.stringify(capped), {
+        ...cookieBaseOptions,
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      })
+    } catch {
+      // ignore cookie issues
+    }
 
     return res.status(201).json({
       leadId: lead.id,
