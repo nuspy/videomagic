@@ -2,11 +2,100 @@
   "navbar": {
     "home": "Home",
     "pricing": "Prezzi",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "checkout": "Checkout"
   },
   "footer": {
     "privacy": "Informativa Privacy",
     "terms": "Termini di Servizio"
+  },
+  "errors": {
+    "required": "Mi spiace, questa risposta è obbligatoria",
+    "needToContinue": "Mi spiace, ho bisogno di questa risposta per continuare",
+    "invalidFormat": "Formato non valido. Ammessi: 16:9 o 9:16",
+    "invalidDuration": "La durata totale deve essere un intero positivo (in secondi) e multiplo di 5",
+    "notDraft": "Questo lead non può più essere aggiornato",
+    "notFound": "Elemento non trovato",
+    "fileTooLarge": "File troppo grande",
+    "unsupportedMedia": "Tipo di file non supportato",
+    "quotaExceeded": "Ti restano {{count}} anteprime fino al {{date}}."
+  },
+  "overlay": {
+    "uploadTitle": "Upload",
+    "addFiles": "Aggiungi file",
+    "processing": "Elaborazione ~ 1 minuto…",
+    "ok": "OK",
+    "removeAll": "Rimuovi tutto",
+    "remove": "Rimuovi",
+    "close": "Chiudi"
+  },
+  "quota": {
+    "banner": "Ti restano {{count}} anteprime per i prossimi 30 giorni.",
+    "exceeded": "Hai raggiunto la quota mensile di anteprime."
+  },
+  "admin": {
+    "title": "Impostazioni Admin",
+    "provider": "Provider",
+    "providerOpenai": "OpenAI",
+    "providerGemini": "Gemini",
+    "model": "Modello",
+    "temperature": "Temperatura",
+    "negativePrompt": "Prompt negativo",
+    "save": "Salva modifiche",
+    "saved": "Impostazioni salvate"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "selectProvider": "Seleziona un provider di pagamento",
+    "stripe": "Paga con Stripe",
+    "paypal": "Paga con PayPal",
+    "buyNow": "Acquista ora",
+    "success": "Pagamento completato",
+    "failed": "Pagamento fallito"
+  },
+  "email": {
+    "receiptSubject": "Ricevuta ordine {{orderId}}",
+    "greeting": "Ciao{{name}},",
+    "footer": "Per qualsiasi domanda rispondi a questa email."
+  },
+  "privacy": {
+    "seoTitle": "Privacy Policy • Starter App",
+    "seoDescription": "Panoramica dell'informativa privacy.",
+    "title": "Informativa Privacy",
+    "toc": {
+      "intro": "Introduzione",
+      "data": "Dati raccolti",
+      "usage": "Come utilizziamo i dati",
+      "rights": "I tuoi diritti",
+      "contact": "Contatti"
+    },
+    "sections": {
+      "intro": "Contenuto segnaposto. Sostituisci con la tua policy.",
+      "data": "Contenuto segnaposto. Sostituisci con la tua policy.",
+      "usage": "Contenuto segnaposto. Sostituisci con la tua policy.",
+      "rights": "Contenuto segnaposto. Sostituisci con la tua policy.",
+      "contact": "Contenuto segnaposto. Sostituisci con la tua policy."
+    }
+  },
+  "terms": {
+    "seoTitle": "Termini di Servizio • Starter App",
+    "seoDescription": "Panoramica dei termini di servizio.",
+    "title": "Termini di Servizio",
+    "toc": {
+      "intro": "Introduzione",
+      "use": "Uso consentito",
+      "payments": "Pagamenti",
+      "termination": "Chiusura",
+      "law": "Legge applicabile"
+    },
+    "sections": {
+      "intro": "Contenuto segnaposto. Sostituisci con i tuoi termini.",
+      "use": "Contenuto segnaposto. Sostituisci con i tuoi termini.",
+      "payments": "Contenuto segnaposto. Sostituisci con i tuoi termini.",
+      "termination": "Contenuto segnaposto. Sostituisci con i tuoi termini.",
+      "law": "Contenuto segnaposto. Sostituisci con i tuoi termini."
+    }
   },
   "home": {
     "seoTitle": "Home • Starter App",

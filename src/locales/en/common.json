@@ -2,11 +2,100 @@
   "navbar": {
     "home": "Home",
     "pricing": "Pricing",
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "checkout": "Checkout"
   },
   "footer": {
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "errors": {
+    "required": "Sorry, this answer is required",
+    "needToContinue": "Sorry, I need this answer to continue",
+    "invalidFormat": "Invalid format. Allowed: 16:9 or 9:16",
+    "invalidDuration": "Total duration must be a positive integer (in seconds) and a multiple of 5",
+    "notDraft": "This lead can no longer be updated",
+    "notFound": "Not found",
+    "fileTooLarge": "File too large",
+    "unsupportedMedia": "Unsupported media type",
+    "quotaExceeded": "You have {{count}} previews remaining until {{date}}."
+  },
+  "overlay": {
+    "uploadTitle": "Upload",
+    "addFiles": "Add files",
+    "processing": "Processing ~ 1 minute…",
+    "ok": "OK",
+    "removeAll": "Remove all",
+    "remove": "Remove",
+    "close": "Close"
+  },
+  "quota": {
+    "banner": "You have {{count}} previews remaining for the next 30 days.",
+    "exceeded": "You’ve reached your monthly preview quota."
+  },
+  "admin": {
+    "title": "Admin Settings",
+    "provider": "Provider",
+    "providerOpenai": "OpenAI",
+    "providerGemini": "Gemini",
+    "model": "Model",
+    "temperature": "Temperature",
+    "negativePrompt": "Negative prompt",
+    "save": "Save changes",
+    "saved": "Settings saved"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "selectProvider": "Select a payment provider",
+    "stripe": "Pay with Stripe",
+    "paypal": "Pay with PayPal",
+    "buyNow": "Buy now",
+    "success": "Payment successful",
+    "failed": "Payment failed"
+  },
+  "email": {
+    "receiptSubject": "Your receipt for order {{orderId}}",
+    "greeting": "Hello{{name}},",
+    "footer": "If you have any questions, just reply to this email."
+  },
+  "privacy": {
+    "seoTitle": "Privacy Policy • Starter App",
+    "seoDescription": "Privacy policy outline.",
+    "title": "Privacy Policy",
+    "toc": {
+      "intro": "Introduction",
+      "data": "Data We Collect",
+      "usage": "How We Use Data",
+      "rights": "Your Rights",
+      "contact": "Contact"
+    },
+    "sections": {
+      "intro": "Stub content. Replace with your policy.",
+      "data": "Stub content. Replace with your policy.",
+      "usage": "Stub content. Replace with your policy.",
+      "rights": "Stub content. Replace with your policy.",
+      "contact": "Stub content. Replace with your policy."
+    }
+  },
+  "terms": {
+    "seoTitle": "Terms of Service • Starter App",
+    "seoDescription": "Terms of service outline.",
+    "title": "Terms of Service",
+    "toc": {
+      "intro": "Introduction",
+      "use": "Acceptable Use",
+      "payments": "Payments",
+      "termination": "Termination",
+      "law": "Governing Law"
+    },
+    "sections": {
+      "intro": "Stub content. Replace with your terms.",
+      "use": "Stub content. Replace with your terms.",
+      "payments": "Stub content. Replace with your terms.",
+      "termination": "Stub content. Replace with your terms.",
+      "law": "Stub content. Replace with your terms."
+    }
   },
   "home": {
     "seoTitle": "Home • Starter App",
