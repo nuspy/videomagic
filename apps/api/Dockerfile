@@ -6,7 +6,7 @@ RUN apk add --no-cache curl
 
 # Install deps
 COPY apps/api/package*.json ./
-RUN npm ci
+RUN npm install
 
 # Copy app
 COPY apps/api ./

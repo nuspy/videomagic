@@ -8,7 +8,7 @@ RUN npm ci
 
 # Copy sources and build
 COPY . .
-RUN npm run build
+RUN npx vite build
 
 # ---- Serve stage ----
 FROM nginx:1.27-alpine AS serve
