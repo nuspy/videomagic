@@ -59,6 +59,18 @@
     "greeting": "Hello{{name}},",
     "footer": "If you have any questions, just reply to this email."
   },
+  "autosave": {
+    "disclaimer": "We save your answers locally on your device so you don’t lose progress. You can disable or delete this at any time.",
+    "resumeTitle": "Resume previous draft?",
+    "resume": "Resume",
+    "cancel": "Discard",
+    "export": "Export JSON",
+    "clear": "Clear draft",
+    "clearConfirm": "Are you sure you want to clear the draft?",
+    "disabled": "Autosave disabled (storage not available).",
+    "sizeWarning": "Draft is getting large. Consider exporting and resetting.",
+    "exportAndReset": "Export & reset"
+  },
   "privacy": {
     "seoTitle": "Privacy Policy • Starter App",
     "seoDescription": "Privacy policy outline.",

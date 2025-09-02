@@ -59,6 +59,18 @@
     "greeting": "Ciao{{name}},",
     "footer": "Per qualsiasi domanda rispondi a questa email."
   },
+  "autosave": {
+    "disclaimer": "Salviamo localmente le risposte sul tuo dispositivo per non perdere i progressi. Puoi disattivare o cancellare in qualsiasi momento.",
+    "resumeTitle": "Riprendere la bozza precedente?",
+    "resume": "Riprendi",
+    "cancel": "Annulla",
+    "export": "Esporta JSON",
+    "clear": "Pulisci bozza",
+    "clearConfirm": "Sei sicuro di voler pulire la bozza?",
+    "disabled": "Autosave disattivato (storage non disponibile).",
+    "sizeWarning": "La bozza sta diventando grande. Valuta di esportare e resettare.",
+    "exportAndReset": "Esporta & resetta"
+  },
   "privacy": {
     "seoTitle": "Privacy Policy • Starter App",
     "seoDescription": "Panoramica dell'informativa privacy.",
