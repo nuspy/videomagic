@@ -5,7 +5,7 @@ const KEY = 'leadDraft:v1'
 test.beforeEach(async ({ page }) => {
   await page.addInitScript((value) => {
     // expose helper to set draft before navigation
-    window.localStorage.setItem('leadDraft:v1', value as string)
+    window.localStorage.setItem('leadDraft:v1', String(value))
   }, '')
 })
 
@@ -25,7 +25,7 @@ test('Resume modal appears and resume closes it', async ({ page }) => {
     status: 'draft',
   }
   await page.addInitScript((val) => {
-    window.localStorage.setItem(KEY, val as string)
+    window.localStorage.setItem(KEY, String(val))
   }, JSON.stringify(draft))
 
   await page.goto('/en')
@@ -50,7 +50,7 @@ test('Discard clears storage and modal closes', async ({ page }) => {
     status: 'draft',
   }
   await page.addInitScript((val) => {
-    window.localStorage.setItem(KEY, val as string)
+    window.localStorage.setItem(KEY, String(val))
   }, JSON.stringify(draft))
 
   await page.goto('/en')
@@ -78,7 +78,7 @@ test('Language change does not translate data, resume still works', async ({ pag
     status: 'draft',
   }
   await page.addInitScript((val) => {
-    window.localStorage.setItem(KEY, val as string)
+    window.localStorage.setItem(KEY, String(val))
   }, JSON.stringify(draft))
 
   await page.goto('/en')
